@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Contact Us</title>
+ <style>
+  body {
+ font-family: Arial, sans-serif;
+ background-color: #f0f8ff; /* Light blue background */
+ margin: 0;
+ padding: 0;
+ color: #333;
+ }
+ header {
+ background-color: #1e90ff; /* Dodger blue */
+ padding: 20px 0;
+ text-align: center;
+ color: white;
+ border-radius: 0 0 10px 10px;
+ }
+ header .image-container img {
+ width: 200px;
+ }
+ nav ul {
+ list-style-type: none;
+ padding: 0;
+ margin: 0;
+ }
+ nav ul li {
+ display: inline;
+ margin-right: 20px;
+ }
+ nav ul li a {
+ color: white;
+ text-decoration: none;
+ font-weight: bold;
+ }
+ nav ul li a:hover {
+ text-decoration: underline;
+ }
+ main {
+ padding: 20px;
+ max-width: 600px;
+ margin: 30px auto;
+ background-color: white;
+ border-radius: 10px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ main h2 {
+ color: #1e90ff;
+ text-align: center;
+ }
+ form {
+ display: flex;
+ flex-direction: column;
+ }
+ form label {
+ margin: 10px 0 5px;
+ }
+ form input, form textarea {
+ padding: 10px;
+ margin-bottom: 20px;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ }
+ form button {
+ padding: 10px;
+ border: none;
+ background-color: #1e90ff;
+ color: white;
+ border-radius: 5px;
+  cursor: pointer;
+ font-size: 16px;
+ }
+ form button:hover {
+ background-color: #1c86ee; /* Slightly darker blue */
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <div class="image-container">
+ <img src="images/info.png" alt="Association for Computing Machinery" style="border-radius: 7px;">
+ </div>
+ <nav>
+ <ul>
+ <li style="padding-top: 25px;"><a href="index.html">Home</a></li>
+ <!-- <li><a href="contact.html">Contact Us</a></li> -->
+ </ul>
+ </nav>
+ </header>
+ <main>
+ <h2>Contact Us</h2>
+ <form action="https://formspree.io/f/mwpepnyz" method="POST">
+ <label for="name">Name:</label>
+ <input type="text" id="name" name="name" required>
+ <label for="email">Email:</label>
+ <input type="email" id="email" name="email" required>
+ <label for="review">Review:</label>
+ <textarea id="review" name="review" rows="4" required></textarea>
+ <button type="submit">Submit</button>
+ </form>
+ </main>
+</body>
+</html>
