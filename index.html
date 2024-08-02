@@ -10,6 +10,79 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+          body {
+         font-family: Arial, sans-serif;
+         background-color: #f0f8ff; /* Light blue background */
+         margin: 0;
+         padding: 0;
+         color: #333;
+         }
+         header {
+         background-color: #1e90ff; /* Dodger blue */
+         padding: 20px 0;
+         text-align: center;
+         color: white;
+         border-radius: 0 0 10px 10px;
+         }
+         header .image-container img {
+         width: 200px;
+         }
+         nav ul {
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+         }
+         nav ul li {
+         display: inline;
+         margin-right: 20px;
+         }
+         nav ul li a {
+         color: white;
+         text-decoration: none;
+         font-weight: bold;
+         }
+         nav ul li a:hover {
+         text-decoration: underline;
+         }
+         main {
+         padding: 20px;
+         max-width: 600px;
+         margin: 30px auto;
+         background-color: white;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+         main h2 {
+         color: #1e90ff;
+         text-align: center;
+         }
+         form {
+         display: flex;
+         flex-direction: column;
+         }
+         form label {
+         margin: 10px 0 5px;
+         }
+         form input, form textarea {
+         padding: 10px;
+         margin-bottom: 20px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         }
+         form button {
+         padding: 10px;
+         border: none;
+         background-color: #1e90ff;
+         color: white;
+         border-radius: 5px;
+          cursor: pointer;
+         font-size: 16px;
+         }
+         form button:hover {
+         background-color: #1c86ee; /* Slightly darker blue */
+         }
+         </style>
     </head>
     <body style="background-color: rgb(210, 242, 247);">
       <nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top">
@@ -43,7 +116,7 @@
         </div>
       </nav>
       <div class="container-fluid mt-3">
-        <marquee><h3>Welcome to ACM Student Chapter</h3></marquee><br><br>
+        <!-- <marquee><h3>Welcome to ACM Student Chapter</h3></marquee><br><br> -->
         <div style="background-color: rgb(255, 255, 255);border-radius: 7px;padding-left: 5px;padding-bottom: 3px;">
           <div class="row">
             <div class="col"
@@ -51,19 +124,11 @@
             </div>
           </div>
           <div class="container">
-            <div class="row">
-              <div class="col-9">
-                <h5 style="margin-top: 10px;border-radius: 10px;text-align: justify;padding:3px;">The Association for Computing Machinery (ACM) is guided by volunteers who direct its activities, including conferences, educational resources, and research publications, to support the global computing community.</h5>
-              </div>
-              <div class="col-3">
-                <img class="img-fluid" src="info.png" style="width:250px;">
-              </div>
-            </div>
+            <h5 style="margin-top: 10px;border-radius: 10px;text-align: justify;padding:3px;">The Association for Computing Machinery (ACM) is guided by volunteers who direct its activities, including conferences, educational resources, and research publications, to support the global computing community.</h5>
           </div>
         </div>
       <div id="about" style="background-color: rgb(253,253,253); border-radius: 7px;padding-left: 5px;margin-top: 10px;padding-bottom: 5px;padding-right: 5px;">
         <h2 align="center" style="color: rgb(62, 69, 205);"><u>About</u></h2>
-        <img src="acm.jpeg" align="center" style="width: 300px;padding-left: 30px;">
         <h6 style="padding-top: 3px;padding-left: 30px;padding-right: 30px;text-align: justify;">The Association for Computing Machinery (ACM) is a US-based international learned society for computing. It was founded in 1947 and is the world's largest scientific and educational computing society. The ACM is a non-profit professional membership group, reporting nearly 110,000 student and professional members as of 2022. Its headquarters are in New York City.</h6>
         <br>
         <div class="container">
@@ -259,17 +324,31 @@
         </div>
 
 
-
-
+        <br>
         <div id="contact" style="padding-left: 5px;margin-top: 10px;padding-bottom: 5px;padding-right: 5px;">
-          <h2 align="center" style="color: rgb(62, 69, 205);"><u>Contact Us</u></h2>
-          <a href="contact.html">
-            <button type="button" class="btn btn-success">Click Here</button>
-          </a><br><br>
+          <!-- <h2 align="center" style="color: rgb(62, 69, 205);"><u>Contact Us</u></h2>
+          <br> -->
+          <div style="background-color: #1c86ee;padding-top: 50px;padding-bottom: 30px;border-radius: 7px;">
+            <div class="image-container"  align="center">
+                <h1 style="color: white;">Contact Us</h1>
+            </div>
+          </div>
+        <main>
+            <form action="https://formspree.io/f/mwpepnyz" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+          <br>
           <a href="https://www.instagram.com/acmsociety_au?igsh=aDQxZ2QzaHlzaHRh">
-            <i class="fa fa-instagram" style="font-size:25px;"> Instagram</i>
+            <i class="fa fa-instagram" style="font-size:25px;">Instagram</i>
           </a>
-        </div>  
+        </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
